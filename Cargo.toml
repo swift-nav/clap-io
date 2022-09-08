@@ -1,0 +1,19 @@
+[package]
+name = "clap-io"
+version = "0.1.0"
+description = "Add input and output flags to clap commands"
+authors = ["Swift Navigation <dev@swiftnav.com>"]
+edition = "2021"
+readme = "README.md"
+repository = "https://github.com/swift-nav/clap-io"
+
+[dependencies]
+atty = "0.2"
+
+[dependencies.clap]
+version = "3.0"
+default-features = false
+features = ["std", "derive"]
+
+[dev-dependencies]
+anyhow = "1.0.64"
