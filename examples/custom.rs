@@ -6,10 +6,10 @@ use clap_io::{Input, Output};
 /// Copy --in to --out
 #[derive(Debug, Parser)]
 struct Cli {
-    #[clap(long = "in", parse(from_os_str))]
+    #[arg(long = "in")]
     input: Input,
 
-    #[clap(long = "out", parse(from_os_str))]
+    #[arg(long = "out")]
     output: Output,
 }
 

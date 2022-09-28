@@ -29,7 +29,7 @@
 //!
 //! #[derive(Parser)]
 //! struct Cli {
-//!    #[clap(long = "in", parse(from_os_str))]
+//!    #[clap(long = "in")]
 //!     input: Input,
 //! }
 //!
@@ -57,18 +57,16 @@ const STDOUT: &str = "<stdout>";
 #[derive(Debug, Args)]
 pub struct InputOutput {
     /// Input file path
-    #[clap(
+    #[arg(
         long,
-        parse(from_os_str),
         default_value_os_t,
         value_hint = ValueHint::FilePath,
     )]
     pub input: Input,
 
     /// Output file path
-    #[clap(
+    #[arg(
         long,
-        parse(from_os_str),
         default_value_os_t,
         value_hint = ValueHint::FilePath,
     )]
@@ -76,7 +74,7 @@ pub struct InputOutput {
 }
 
 /// Either a file or stdin.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Input(Stream);
 
 impl Input {
@@ -172,7 +170,7 @@ impl From<Input> for OsString {
 }
 
 /// Either a file or stdout.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Output(Stream);
 
 impl Output {
@@ -267,7 +265,7 @@ impl From<Output> for OsString {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 enum Stream {
     File(PathBuf),
     Stdin { tty: bool },
