@@ -6,6 +6,7 @@ authors = ["Swift Navigation <dev@swiftnav.com>"]
 edition = "2021"
 readme = "README.md"
 repository = "https://github.com/swift-nav/clap-io"
+license = "MIT"
 
 [dependencies]
 atty = "0.2"
