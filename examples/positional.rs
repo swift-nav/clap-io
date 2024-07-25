@@ -19,8 +19,7 @@
 
 use anyhow::Result;
 
-use clap::{Parser, CommandFactory};
-use clap_io::{Input, Output};
+use clap::Parser;
 
 macro_rules! converter {
     ($name:ident) => {

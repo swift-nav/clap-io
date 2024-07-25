@@ -8,7 +8,6 @@ Easily add a `--input` and `--output` flags to CLIs using clap
 cargo run --example copy -- --help
 ```
 
-
 ## LICENSE
 
 Copyright © 2023 Swift Navigation

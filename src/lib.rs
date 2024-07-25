@@ -98,7 +98,7 @@ pub struct Input(Stream);
 
 impl Input {
     /// Open the input stream.
-    pub fn open(self) -> io::Result<Box<dyn Read + Sync + 'static>> {
+    pub fn open(self) -> io::Result<Box<dyn Read + 'static>> {
         match self.0 {
             Stream::File(_) => {
                 let file = self.open_file().unwrap()?;
@@ -194,7 +194,7 @@ pub struct Output(Stream);
 
 impl Output {
     /// Open the output stream.
-    pub fn open(self) -> io::Result<Box<dyn Write + Sync + 'static>> {
+    pub fn open(self) -> io::Result<Box<dyn Write + 'static>> {
         match self.0 {
             Stream::File(_) => {
                 let file = self.open_file().unwrap()?;
