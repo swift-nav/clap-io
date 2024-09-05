@@ -17,12 +17,12 @@ and as of v0.2.0, this project adheres to [Semantic Versioning](https://semver.o
 
 ### Fixed
 
-- Follows SemVar
+- Follows SemVer
 
 ## [0.1.1] 2024-07-25 [YANKED]
 
 NOTE: This release only existed as a git tag, and will not be posted to 
-crates.io because it did not follow SemVar.
+crates.io because it did not follow SemVer.
 
 ### Fixed
 
