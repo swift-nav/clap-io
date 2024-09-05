@@ -1,6 +1,6 @@
 [package]
 name = "clap-io"
-version = "0.1.1"
+version = "0.2.0"
 description = "Add input and output flags to clap commands"
 authors = ["Swift Navigation <dev@swiftnav.com>"]
 edition = "2021"
