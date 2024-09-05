@@ -9,7 +9,7 @@ and as of v0.2.0, this project adheres to [Semantic Versioning](https://semver.o
 
 ### Breaking Changes
 
-- Removes a sync trait requierment on the wrapped inputs and outputs
+- Removes a sync trait bound on the wrapped inputs and outputs
 
 ### Added
 
